@@ -1,6 +1,6 @@
 .main-container{
     width: 400px;
-    min-height: 550px;
+    min-height: 600px;
     max-height: fit-content;
     margin: auto;
     margin-top: 40px;
@@ -61,7 +61,7 @@ color: #8E1616;
     margin: 5px auto 0 auto;
 }
 .weather-img .desc{
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     margin-top: 0;
     margin-bottom: 5px;

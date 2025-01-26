@@ -23,7 +23,6 @@ const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=met
         const result = await response.json();
         if(response.ok){
             setWeather(result)
-            console.log(result);
             setError("")
         }else{
             setError("Not Found!, Enter the correct city name")
