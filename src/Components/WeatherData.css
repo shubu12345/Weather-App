@@ -157,7 +157,7 @@ font-size: 45px;
 
 /*------------ Media Query ---------------*/
 
-@media screen and (max-width:375px){
+@media screen and (max-width:425px){
     .main-container {
         width: 300px;
         height: 550px;
