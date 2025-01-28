@@ -67,11 +67,11 @@ export default function WeatherData({ theme }) {
   if (city) {
     const API_KEY = "6f70e8e404db97030a285fccaec535b8";
     const Url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
-
+  console.log(Url);
+  
     async function getData() {
       const response = await fetch(Url);
       const result = await response.json();
-
       if (response.ok) {
         setCity(result);
       }
@@ -87,7 +87,8 @@ export default function WeatherData({ theme }) {
   const dd = `https://api.openweathermap.org/data/2.5/weather?q=${current}&units=metric&appid=${API_KEY}`;
 
   async function getAllCity() {
-    const data = await fetch(dd);
+    if(current){
+      const data = await fetch(dd);
     const output = await data.json();
     if (data.ok) {
       setWeather(output);
@@ -95,6 +96,8 @@ export default function WeatherData({ theme }) {
     } else {
       setError("NoT Found! Please enter the correct city.");
     }
+    }
+    
   }
 
   return (
